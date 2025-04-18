@@ -1,3 +1,4 @@
+
 document.getElementById("IrProyectos").addEventListener("click", function() {
      document.querySelector(".Proyectos").scrollIntoView({ behavior: "smooth" }); 
 
