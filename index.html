@@ -9,77 +9,149 @@
     <script src="main.js" defer></script>
 </head>
 <body>
+
+    <header>
+
+        <label class="switch">
+            <input type="checkbox" id="ModoOscuro">
+            <span class="slider"></span>
+        </label>
+        
+    </header>
+
     <div class="contenedor_foto">
         <img src="Imagen Portafolio.jpg" alt="Imagen Personal">
     </div>
 
     <div class = "Contenedor_Titulo">
         <h1>Augusto Rodriguez</h1>
-        <h3>Desarrollador Web</h3>
+        <h3>Desarrollador FullStack</h3>
     </div>
 
     <div class="Ir_proyectos">
-        <button id="IrProyectos"> Proyectos </button>
+        <button id="IrProyectos" aria-label="Ver Proyectos" data-tooltip="Ver Proyectos"> Proyectos  </button>
     </div>
 
  
 
 
     <div class="BtnInteractivos">
-        <button id="BotonMail" onclick="location.href='mailto:augustocrodriguez2004@gmail.com'">
+        <button id="BotonMail" onclick="location.href='mailto:augustocrodriguez2004@gmail.com'" aria-label="Enviar correo" data-tooltip="Enviar correo">
         <ion-icon name="mail-outline"></ion-icon>
         </button>
 
-        <button id="Telefono" onclick="location.href='tel:+54 9299 453-4142'">
+        <button id="Telefono" onclick="location.href='tel:+54 9299 453-4142'" aria-label="Llamar por teléfono" data-tooltip="Llamar por teléfono">
             <ion-icon name="call-outline"></ion-icon>
         </button>
-        <button id="Curriculum" onclick="location.href='https://drive.google.com/file/d/1LYotOOQPre28GK5dMpnCCpTvjoRyni4w/view?usp=sharing'">
+        <button id="Curriculum" onclick="location.href='https://drive.google.com/file/d/1LYotOOQPre28GK5dMpnCCpTvjoRyni4w/view?usp=sharing'" aria-label="Ver CV" data-tooltip="Ver CV">
             <ion-icon name="book-outline"></ion-icon>
         </button>
 
-        <button id="Linkedin" onclick="location.href='https://www.linkedin.com/in/augusto-c%C3%A9sar-rodr%C3%ADguez-7381ba290/'">
+        <button id="Linkedin" onclick="location.href='https://www.linkedin.com/in/augusto-c%C3%A9sar-rodr%C3%ADguez-7381ba290/'" aria-label="Abrir LinkedIn" data-tooltip="Abrir LinkedIn">
             <ion-icon name="logo-linkedin"></ion-icon>
         </button>
 
-        <label class="switch">
-            <input type="checkbox" id="ModoOscuro">
-            <span class="slider"></span>
-        </label>
 
     </div>
 
     <div class="Contenedor_Personal">
         <h2>Sobre mi</h2>
         <p>
-            Hola, mi nombre es Augusto Rodriguez, soy un estudiante de programación y desarrollo web, me gusta aprender cosas nuevas, siempre estoy dispuesto a ayudar a los demás y busco la manera de mejorar en lo que hago.
+            Hola, mi nombre es Augusto Rodriguez, soy un estudiante de programación y desarrollo FullStack, me gusta aprender cosas nuevas, siempre estoy dispuesto a ayudar a los demás y busco la manera de mejorar en lo que hago.
             <br>
         </p>
         </div>
 
         <div class="Contenedor_Idiomas">
-            <div class="idioma">
-                <ion-icon name="logo-html5"></ion-icon>
+            <div class="idioma" aria-label="HTML5" data-tech="HTML5">
+                    <ion-icon name="logo-html5"></ion-icon>
+                </div>
+                <div class="idioma" aria-label="CSS3" data-tech="CSS3">
+                    <ion-icon name="logo-css3"></ion-icon>
+                </div>
+                <div class="idioma" aria-label="JavaScript" data-tech="JavaScript">
+                    <ion-icon name="logo-javascript"></ion-icon>
+                </div>
+                <div class="idioma" aria-label="GitHub" data-tech="GitHub">
+                    <ion-icon name="logo-github"></ion-icon>
+                </div>
+            <div class="idioma" aria-label="Node.js" data-tech="Node.js">
+                <ion-icon name="logo-nodejs"></ion-icon>
             </div>
-            <div class="idioma">
-                <ion-icon name="logo-css3"></ion-icon>
+            <div class="idioma" aria-label="Firebase" data-tech="Firebase">
+                <ion-icon name="logo-firebase"></ion-icon>
             </div>
-            <div class="idioma">
-                <ion-icon name="logo-javascript"></ion-icon>
+            <div class="idioma" aria-label="Vue.js" data-tech="Vue.js">
+                <ion-icon name="logo-vue"></ion-icon>
             </div>
-            <div class="idioma">
-                <ion-icon name="logo-github"></ion-icon>
+            <div class="idioma" aria-label="npm" data-tech="npm">
+                <ion-icon name="logo-npm"></ion-icon>
             </div>
-
         </div>
 
     <div class="Proyectos">
+        <button class="PrevProyecto" aria-label="Anterior">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+        </button>
+    
         <div class="Proyecto">
-            <a href='https://github.com/aufiNa/Rimainder'>
-            <img src="Proyecto1.png" alt="Proyecto 1 id="Proyecto1">
-        </a>
-            <h3>Calendario interactivo</h3>
-            <p>Este es un proyecto en el que se creó un calendario con la idea de poder crear recordatorios. Además, cuenta con un sistema de inicio de sesión y creación de cuentas, junto con diferentes funciones relacionadas con el calendario. </p>
+            <a href='https://github.com/aufiNa/Rimainder' target="_blank" rel="noopener noreferrer">
+            <img src="Proyecto1.png" alt="Proyecto 1" id="Proyecto1">
+            </a>
+            <h3> Rimainder </h3>
+            <p>
+                Rimainder es una aplicación de recordatorios con calendario que integra Telegram para avisarte de tus eventos de forma automática (1 día, 1 hora y 30 minutos antes). Cuenta con autenticación segura y permite crear eventos tanto desde la web como mediante comandos del bot.
+            </p>
+            <p>
+                Tecnologías: Node.js, Express, PostgreSQL, TypeORM, JWT, y Telegram Bot API.
+            </p>
+            <p>
+                <a href="https://rimaindernode.onrender.com/" class="card-link" target="_blank" rel="noopener noreferrer">Ver demo</a>
+            </p>
         </div>
+
+           <div class="Proyecto hidden">
+            <a href='https://github.com/Augusto-ACR/invitaciones-app' target="_blank" rel="noopener noreferrer">
+            <img src="Screenshot 2025-12-10 204155.png" alt="Invitaciones App" id="Proyecto2">
+            </a>
+            <h3>Invitaciones para Cumpleaños</h3>
+            <p>
+                Aplicación web para crear invitaciones digitales personalizadas y compartirlas mediante un enlace único. Los invitados pueden confirmar asistencia (sí/no/tal vez) y enviar mensaje automático por WhatsApp al organizador. Incluye resumen estadístico de respuestas.
+            </p>
+            <p>
+                Tecnologías: Node.js + Express, PostgreSQL + TypeORM, HTML/CSS/JavaScript (vanilla), API REST y configuración por `.env` para despliegue (ej. Render).
+            </p>
+        </div>
+                     <div class="Proyecto hidden">
+                 <a href='https://github.com/RolandoVillegas/sistema-gestion-guardias-medicas' target="_blank" rel="noopener noreferrer">
+            <img src="ChatGPT Image 10 dic 2025, 08_37_46 p.m..png" alt="SGGM - Sistema de Gestión de Guardias Médicas" id="Proyecto3">
+            </a>
+            <h3>SGGM – Sistema de Gestión de Guardias Médicas</h3>
+            <p>
+                Backend en Node.js/Express para administrar integralmente las guardias médicas de una institución: usuarios, profesionales, servicios, registro de guardias y auditoría/logging con RabbitMQ. Implementa autenticación JWT, autorización por roles, validación con Joi y una arquitectura modular por dominios (vertical slice).
+            </p>
+            <p>
+                Tecnologías: Node.js, Express, TypeORM, MySQL, RabbitMQ, JWT/Passport, Joi. Documentación de API disponible en Postman.
+            </p>
+            <p>
+                <a href="https://documenter.getpostman.com/view/44031312/2sB3WtsJmx" class="card-link" target="_blank" rel="noopener noreferrer">Ver API (Postman)</a>
+            </p>
+        </div>
+                     <div class="Proyecto hidden">
+                 <a href='https://github.com/Augusto-ACR/dashboard-biblioteca-Rodriguez' target="_blank" rel="noopener noreferrer">
+            <img src="Screenshot 2025-12-10 205700.png" alt="Dashboard Biblioteca Rodríguez" id="Proyecto4">
+            </a>
+            <h3>Dashboard Biblioteca Rodríguez</h3>
+            <p>
+                Panel de control para visualizar métricas y gestionar información de una biblioteca. Incluye vistas de préstamos, usuarios, catálogos y estadísticas clave con filtros, búsqueda y componentes interactivos.
+            </p>
+            <p>
+                Tecnologías: JavaScript (vanilla), HTML, CSS y consumo de APIs/servicios. Estructura modular y estilos responsivos pensados para uso en escritorio y móvil.
+            </p>
+        </div>
+        <button class="NextProyecto" aria-label="Siguiente">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
     </div>
 
 
