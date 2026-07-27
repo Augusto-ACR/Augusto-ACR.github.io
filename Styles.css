@@ -463,6 +463,9 @@ section{
 }
 .Proyecto img:hover{ transform: scale(1.05); }
 
+/* Capturas verticales: recortar desde arriba */
+.Proyecto img.img-top{ object-position: top; }
+
 /* Vitrina escritorio + móvil (Cuentitas) */
 .Proyecto a.media-duo{ position: relative; }
 .Proyecto img.media-movil{
