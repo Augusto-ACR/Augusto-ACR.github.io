@@ -518,6 +518,92 @@ section{
 }
 
 /* --------------------------------------------------------------------------
+   Formación
+   -------------------------------------------------------------------------- */
+.Formacion{
+    display: grid;
+    gap: var(--space-2);
+    max-width: 640px;
+    margin: 0 auto var(--space-4);
+}
+.titulo-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: var(--space-2) var(--space-3);
+}
+.titulo-card h3{ font-size: 1.05rem; }
+.edu-badge{
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+.edu-badge.en-curso{ color: var(--accent-strong); background: var(--accent); }
+.edu-badge.completado{ color: var(--text-muted); border: 1px solid var(--border); }
+
+.certs-titulo{
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: var(--space-2);
+}
+.certs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+.cert-chip{
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--accent);
+    color: var(--text);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.cert-chip:hover{
+    background-color: var(--accent);
+    color: var(--accent-strong);
+}
+
+/* --------------------------------------------------------------------------
+   CTA disponibilidad (hero)
+   -------------------------------------------------------------------------- */
+.disponible{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: var(--space-2);
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.05);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+.disponible .dot{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #4ade80;
+    flex-shrink: 0;
+    animation: pulso 1.6s ease-in-out infinite;
+}
+@keyframes pulso{ 50%{ opacity: 0.35; } }
+.lightMode .disponible{ background: rgba(0,0,0,0.04); }
+
+/* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
 .pie{
@@ -593,5 +679,6 @@ section{
 @media (prefers-reduced-motion: reduce){
     .Contenedor_Titulo h3{ animation: none; border-right: none; }
     .reveal{ opacity: 1; transform: none; transition: none; }
+    .disponible .dot{ animation: none; }
     *{ scroll-behavior: auto; }
 }
