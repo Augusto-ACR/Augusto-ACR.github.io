@@ -462,6 +462,24 @@ section{
     transition: transform 0.4s ease;
 }
 .Proyecto img:hover{ transform: scale(1.05); }
+
+/* Vitrina escritorio + móvil (Cuentitas) */
+.Proyecto a.media-duo{ position: relative; }
+.Proyecto img.media-movil{
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    height: 78%;
+    width: auto;
+    aspect-ratio: auto;
+    border-radius: 14px;
+    border: 2px solid rgba(255,255,255,0.3);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+.media-duo:hover img:first-child{ transform: scale(1.05); }
+.media-duo:hover .media-movil{ transform: translateY(-5px); }
+.lightMode .media-movil{ border-color: rgba(0,0,0,0.15); }
 .Proyecto h3{
     font-size: 1.2rem;
     padding: var(--space-2) var(--space-2) 0;
