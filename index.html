@@ -1,162 +1,222 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio personal</title>
+    <title>Augusto Rodríguez — Desarrollador FullStack</title>
+
+    <meta name="description" content="Portafolio de Augusto Rodríguez, desarrollador FullStack. Aplicaciones web de punta a punta con Node.js, NestJS, Vue y PostgreSQL, e integración de IA: agentes, tools/MCP y bots de WhatsApp.">
+    <meta name="author" content="Augusto Rodríguez">
+
+    <!-- Open Graph (previsualización al compartir el enlace) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://augusto-acr.github.io/">
+    <meta property="og:title" content="Augusto Rodríguez — Desarrollador FullStack">
+    <meta property="og:description" content="Portafolio de Augusto Rodríguez, desarrollador FullStack. Aplicaciones web de punta a punta con Node.js, NestJS, Vue y PostgreSQL, e integración de IA: agentes, tools/MCP y bots de WhatsApp.">
+    <meta property="og:image" content="https://augusto-acr.github.io/Imagen%20Portafolio.jpg">
+    <meta property="og:locale" content="es_AR">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="Styles.css">
     <script src="main.js" defer></script>
+    <noscript>
+        <style>.reveal{ opacity: 1 !important; transform: none !important; }</style>
+    </noscript>
 </head>
 <body>
 
-    <header>
+    <nav class="navbar">
+        <a href="#inicio" class="nav-logo" aria-label="Inicio">
+            <img src="Imagen Portafolio.jpg" alt="Augusto Rodríguez">
+        </a>
 
-        <label class="switch">
-            <input type="checkbox" id="ModoOscuro">
-            <span class="slider"></span>
-        </label>
-        
-    </header>
-
-    <div class="contenedor_foto">
-        <img src="Imagen Portafolio.jpg" alt="Imagen Personal">
-    </div>
-
-    <div class = "Contenedor_Titulo">
-        <h1>Augusto Rodriguez</h1>
-        <h3>Desarrollador FullStack</h3>
-    </div>
-
-    <div class="Ir_proyectos">
-        <button id="IrProyectos" aria-label="Ver Proyectos" data-tooltip="Ver Proyectos"> Proyectos  </button>
-    </div>
-
- 
-
-
-    <div class="BtnInteractivos">
-        <button id="BotonMail" onclick="location.href='mailto:augustocrodriguez2004@gmail.com'" aria-label="Enviar correo" data-tooltip="Enviar correo">
-        <ion-icon name="mail-outline"></ion-icon>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+            <ion-icon name="menu-outline"></ion-icon>
         </button>
 
-        <button id="Telefono" onclick="location.href='tel:+54 9299 453-4142'" aria-label="Llamar por teléfono" data-tooltip="Llamar por teléfono">
-            <ion-icon name="call-outline"></ion-icon>
-        </button>
-        <button id="Curriculum" onclick="location.href='https://drive.google.com/file/d/1LYotOOQPre28GK5dMpnCCpTvjoRyni4w/view?usp=sharing'" aria-label="Ver CV" data-tooltip="Ver CV">
-            <ion-icon name="book-outline"></ion-icon>
-        </button>
+        <ul class="nav-links" id="navMenu">
+            <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
+            <li><a href="#sobre-mi" data-i18n="nav_about">Sobre mí</a></li>
+            <li><a href="#tecnologias" data-i18n="nav_stack">Tecnologías</a></li>
+            <li><a href="#proyectos" data-i18n="nav_projects">Proyectos</a></li>
+        </ul>
 
-        <button id="Linkedin" onclick="location.href='https://www.linkedin.com/in/augusto-c%C3%A9sar-rodr%C3%ADguez-7381ba290/'" aria-label="Abrir LinkedIn" data-tooltip="Abrir LinkedIn">
-            <ion-icon name="logo-linkedin"></ion-icon>
-        </button>
+        <div class="controles">
+            <div class="idioma-switch" role="group" aria-label="Seleccionar idioma">
+                <button type="button" class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
+                <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+            </div>
 
+            <label class="switch">
+                <input type="checkbox" id="ModoOscuro">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </nav>
 
-    </div>
+    <section id="inicio" class="hero">
+        <div class="contenedor_foto">
+            <img src="Imagen Portafolio.jpg" alt="Foto de Augusto Rodríguez">
+        </div>
 
-    <div class="Contenedor_Personal">
-        <h2>Sobre mi</h2>
-        <p>
-            Hola, mi nombre es Augusto Rodriguez, soy un estudiante de programación y desarrollo FullStack, me gusta aprender cosas nuevas, siempre estoy dispuesto a ayudar a los demás y busco la manera de mejorar en lo que hago.
-            <br>
+        <div class="Contenedor_Titulo">
+            <h1>Augusto Rodriguez</h1>
+            <h3 data-i18n="role">Desarrollador FullStack</h3>
+        </div>
+
+        <div class="Ir_proyectos">
+            <button id="IrProyectos" aria-label="Ver Proyectos" data-tooltip="Ver Proyectos" data-i18n="btn_projects" data-i18n-tooltip="tip_projects">Proyectos</button>
+        </div>
+
+        <div class="BtnInteractivos">
+            <button id="WhatsApp" onclick="window.open('https://wa.me/5492994534142', '_blank')" aria-label="WhatsApp" data-tooltip="WhatsApp" data-i18n-tooltip="tip_whatsapp" data-i18n-aria="tip_whatsapp">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+            </button>
+
+            <button id="BotonMail" onclick="location.href='mailto:augustocrodriguez2004@gmail.com'" aria-label="Enviar correo" data-tooltip="Enviar correo" data-i18n-tooltip="tip_mail" data-i18n-aria="tip_mail">
+                <ion-icon name="mail-outline"></ion-icon>
+            </button>
+
+            <button id="GitHub" onclick="window.open('https://github.com/Augusto-ACR', '_blank')" aria-label="GitHub" data-tooltip="GitHub" data-i18n-tooltip="tip_github" data-i18n-aria="tip_github">
+                <ion-icon name="logo-github"></ion-icon>
+            </button>
+
+            <button id="Linkedin" onclick="window.open('https://www.linkedin.com/in/augusto-c%C3%A9sar-rodr%C3%ADguez-7381ba290/', '_blank')" aria-label="Abrir LinkedIn" data-tooltip="Abrir LinkedIn" data-i18n-tooltip="tip_linkedin" data-i18n-aria="tip_linkedin">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </button>
+
+            <button id="Curriculum" onclick="window.open('https://drive.google.com/file/d/112AG3cGlaGUPVsz-0fWY-ar9zB6PJYWj/view?usp=sharing', '_blank')" aria-label="Ver CV" data-tooltip="Ver CV" data-i18n-tooltip="tip_cv" data-i18n-aria="tip_cv">
+                <ion-icon name="book-outline"></ion-icon>
+            </button>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="Contenedor_Personal reveal">
+        <h2 class="seccion-titulo" data-i18n="about_title">Sobre mi</h2>
+        <p data-i18n="about_text">
+            Hola, soy Augusto Rodríguez, desarrollador FullStack. Construyo aplicaciones web de punta a punta con Node.js y JavaScript, y últimamente enfoco buena parte de mi trabajo en la integración de IA: agentes, herramientas (tools/MCP) y flujos con modelos como Claude. Aprendo rápido, resuelvo problemas reales y busco mejorar de forma constante en lo que hago.
         </p>
-        </div>
+    </section>
 
-        <div class="Contenedor_Idiomas">
-            <div class="idioma" aria-label="HTML5" data-tech="HTML5">
-                    <ion-icon name="logo-html5"></ion-icon>
-                </div>
-                <div class="idioma" aria-label="CSS3" data-tech="CSS3">
-                    <ion-icon name="logo-css3"></ion-icon>
-                </div>
-                <div class="idioma" aria-label="JavaScript" data-tech="JavaScript">
-                    <ion-icon name="logo-javascript"></ion-icon>
-                </div>
-                <div class="idioma" aria-label="GitHub" data-tech="GitHub">
-                    <ion-icon name="logo-github"></ion-icon>
-                </div>
-            <div class="idioma" aria-label="Node.js" data-tech="Node.js">
-                <ion-icon name="logo-nodejs"></ion-icon>
-            </div>
-            <div class="idioma" aria-label="Firebase" data-tech="Firebase">
-                <ion-icon name="logo-firebase"></ion-icon>
-            </div>
-            <div class="idioma" aria-label="Vue.js" data-tech="Vue.js">
-                <ion-icon name="logo-vue"></ion-icon>
-            </div>
-            <div class="idioma" aria-label="npm" data-tech="npm">
-                <ion-icon name="logo-npm"></ion-icon>
-            </div>
+    <section id="tecnologias" class="seccion-stack reveal">
+        <h2 class="seccion-titulo" data-i18n="stack_title">Tecnologías</h2>
+
+    <div class="Contenedor_Idiomas">
+        <div class="idioma" aria-label="HTML5" data-tech="HTML5">
+            <img src="icons/html5.svg" alt="HTML5">
         </div>
+        <div class="idioma" aria-label="CSS3" data-tech="CSS3">
+            <img src="icons/css3.svg" alt="CSS3">
+        </div>
+        <div class="idioma" aria-label="JavaScript" data-tech="JavaScript">
+            <img src="icons/javascript.svg" alt="JavaScript">
+        </div>
+        <div class="idioma" aria-label="TypeScript" data-tech="TypeScript">
+            <img src="icons/typescript.svg" alt="TypeScript">
+        </div>
+        <div class="idioma" aria-label="Node.js" data-tech="Node.js">
+            <img src="icons/nodejs.svg" alt="Node.js">
+        </div>
+        <div class="idioma" aria-label="NestJS" data-tech="NestJS">
+            <img src="icons/nestjs.svg" alt="NestJS">
+        </div>
+        <div class="idioma" aria-label="Express" data-tech="Express">
+            <img src="icons/express.svg" alt="Express">
+        </div>
+        <div class="idioma" aria-label="Vue.js" data-tech="Vue.js">
+            <img src="icons/vuejs.svg" alt="Vue.js">
+        </div>
+        <div class="idioma" aria-label="React Native" data-tech="React Native">
+            <img src="icons/react.svg" alt="React Native">
+        </div>
+        <div class="idioma" aria-label="PostgreSQL" data-tech="PostgreSQL">
+            <img src="icons/postgresql.svg" alt="PostgreSQL">
+        </div>
+        <div class="idioma" aria-label="MySQL" data-tech="MySQL">
+            <img src="icons/mysql.svg" alt="MySQL">
+        </div>
+        <div class="idioma" aria-label="Firebase" data-tech="Firebase">
+            <img src="icons/firebase.svg" alt="Firebase">
+        </div>
+        <div class="idioma" aria-label="Git" data-tech="Git">
+            <img src="icons/git.svg" alt="Git">
+        </div>
+        <div class="idioma idioma-ia" aria-label="Agentes IA" data-tech="Agentes IA">
+            <ion-icon name="sparkles-outline"></ion-icon>
+        </div>
+        <div class="idioma idioma-ia" aria-label="Tools / MCP" data-tech="Tools / MCP">
+            <ion-icon name="construct-outline"></ion-icon>
+        </div>
+        <div class="idioma idioma-ia" aria-label="Claude" data-tech="Claude">
+            <svg viewBox="0 0 24 24" width="42" height="42" fill="currentColor" aria-hidden="true">
+                <path d="M4.7 15.9 8.5 6.1c.2-.5.6-.8 1.1-.8s.9.3 1.1.8l3.8 9.8h-2.1l-.8-2.2H7.6l-.8 2.2H4.7Zm3.5-3.9h2.9L9.6 8.1 8.2 12Zm7.9 3.9V6.1h2v9.8h-2Z"/>
+            </svg>
+        </div>
+    </div>
+
+    </section>
+
+    <section id="proyectos" class="seccion-proyectos reveal">
+        <h2 class="seccion-titulo" data-i18n="projects_title">Proyectos</h2>
 
     <div class="Proyectos">
-        <button class="PrevProyecto" aria-label="Anterior">
-            <ion-icon name="chevron-back-outline"></ion-icon>
-        </button>
-    
+
         <div class="Proyecto">
-            <a href='https://github.com/aufiNa/Rimainder' target="_blank" rel="noopener noreferrer">
-            <img src="Proyecto1.png" alt="Proyecto 1" id="Proyecto1">
+            <a href='https://cuentitas.site/' target="_blank" rel="noopener noreferrer">
+                <img src="cuentitas.png" alt="Cuentitas — dashboard de finanzas" width="450" height="300" loading="lazy" onerror="this.onerror=null;this.src='placeholder.svg'">
             </a>
-            <h3> Rimainder </h3>
-            <p>
-                Rimainder es una aplicación de recordatorios con calendario que integra Telegram para avisarte de tus eventos de forma automática (1 día, 1 hora y 30 minutos antes). Cuenta con autenticación segura y permite crear eventos tanto desde la web como mediante comandos del bot.
+            <h3>Cuentitas</h3>
+            <p data-i18n="cuentitas_desc">
+                Aplicación privada de finanzas personales para llevar los gastos mes a mes, hecha a medida para mí y mi familia. Incluye cuentas, metas de ahorro y campos propios, además de una app móvil y un bot de WhatsApp para registrar todo al día con mayor facilidad.
+            </p>
+            <p data-i18n="cuentitas_tech">
+                Tecnologías: NestJS, TypeORM, Vue, React Native, PostgreSQL, Hostinger (VPS) y APIs públicas.
             </p>
             <p>
+                <a href="https://cuentitas.site/" class="card-link" target="_blank" rel="noopener noreferrer" data-i18n="link_site">Ver sitio</a>
+            </p>
+        </div>
+
+        <div class="Proyecto">
+            <a href='https://github.com/aufiNa/Rimainder' target="_blank" rel="noopener noreferrer">
+                <img src="Proyecto1.png" alt="Proyecto Rimainder" id="Proyecto1" width="450" height="300" loading="lazy">
+            </a>
+            <h3>Rimainder</h3>
+            <p data-i18n="proj1_desc">
+                Rimainder es una aplicación de recordatorios con calendario que integra Telegram para avisarte de tus eventos de forma automática (1 día, 1 hora y 30 minutos antes). Cuenta con autenticación segura y permite crear eventos tanto desde la web como mediante comandos del bot.
+            </p>
+            <p data-i18n="proj1_tech">
                 Tecnologías: Node.js, Express, PostgreSQL, TypeORM, JWT, y Telegram Bot API.
             </p>
             <p>
-                <a href="https://rimaindernode.onrender.com/" class="card-link" target="_blank" rel="noopener noreferrer">Ver demo</a>
+                <a href="https://rimaindernode.onrender.com/" class="card-link" target="_blank" rel="noopener noreferrer" data-i18n="link_demo">Ver demo</a>
             </p>
         </div>
 
-           <div class="Proyecto hidden">
-            <a href='https://github.com/Augusto-ACR/invitaciones-app' target="_blank" rel="noopener noreferrer">
-            <img src="Screenshot 2025-12-10 204155.png" alt="Invitaciones App" id="Proyecto2">
+        <div class="Proyecto">
+            <a href='https://github.com/RolandoVillegas/sistema-gestion-guardias-medicas' target="_blank" rel="noopener noreferrer">
+                <img src="sggm.png" alt="SGGM - Sistema de Gestión de Guardias Médicas" id="Proyecto3" width="450" height="300" loading="lazy" onerror="this.onerror=null;this.src='placeholder.svg'">
             </a>
-            <h3>Invitaciones para Cumpleaños</h3>
-            <p>
-                Aplicación web para crear invitaciones digitales personalizadas y compartirlas mediante un enlace único. Los invitados pueden confirmar asistencia (sí/no/tal vez) y enviar mensaje automático por WhatsApp al organizador. Incluye resumen estadístico de respuestas.
-            </p>
-            <p>
-                Tecnologías: Node.js + Express, PostgreSQL + TypeORM, HTML/CSS/JavaScript (vanilla), API REST y configuración por `.env` para despliegue (ej. Render).
-            </p>
-        </div>
-                     <div class="Proyecto hidden">
-                 <a href='https://github.com/RolandoVillegas/sistema-gestion-guardias-medicas' target="_blank" rel="noopener noreferrer">
-            <img src="ChatGPT Image 10 dic 2025, 08_37_46 p.m..png" alt="SGGM - Sistema de Gestión de Guardias Médicas" id="Proyecto3">
-            </a>
-            <h3>SGGM – Sistema de Gestión de Guardias Médicas</h3>
-            <p>
+            <h3 data-i18n="proj3_title">SGGM – Sistema de Gestión de Guardias Médicas</h3>
+            <p data-i18n="proj3_desc">
                 Backend en Node.js/Express para administrar integralmente las guardias médicas de una institución: usuarios, profesionales, servicios, registro de guardias y auditoría/logging con RabbitMQ. Implementa autenticación JWT, autorización por roles, validación con Joi y una arquitectura modular por dominios (vertical slice).
             </p>
-            <p>
+            <p data-i18n="proj3_tech">
                 Tecnologías: Node.js, Express, TypeORM, MySQL, RabbitMQ, JWT/Passport, Joi. Documentación de API disponible en Postman.
             </p>
             <p>
-                <a href="https://documenter.getpostman.com/view/44031312/2sB3WtsJmx" class="card-link" target="_blank" rel="noopener noreferrer">Ver API (Postman)</a>
+                <a href="https://documenter.getpostman.com/view/44031312/2sB3WtsJmx" class="card-link" target="_blank" rel="noopener noreferrer" data-i18n="link_api">Ver API (Postman)</a>
             </p>
         </div>
-                     <div class="Proyecto hidden">
-                 <a href='https://github.com/Augusto-ACR/dashboard-biblioteca-Rodriguez' target="_blank" rel="noopener noreferrer">
-            <img src="Screenshot 2025-12-10 205700.png" alt="Dashboard Biblioteca Rodríguez" id="Proyecto4">
-            </a>
-            <h3>Dashboard Biblioteca Rodríguez</h3>
-            <p>
-                Panel de control para visualizar métricas y gestionar información de una biblioteca. Incluye vistas de préstamos, usuarios, catálogos y estadísticas clave con filtros, búsqueda y componentes interactivos.
-            </p>
-            <p>
-                Tecnologías: JavaScript (vanilla), HTML, CSS y consumo de APIs/servicios. Estructura modular y estilos responsivos pensados para uso en escritorio y móvil.
-            </p>
-        </div>
-        <button class="NextProyecto" aria-label="Siguiente">
-            <ion-icon name="chevron-forward-outline"></ion-icon>
-        </button>
+
     </div>
+    </section>
 
-
-
+    <footer class="pie">
+        <p data-i18n="footer_text">Hecho con ☕ por Augusto Rodríguez</p>
+    </footer>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+</html>
