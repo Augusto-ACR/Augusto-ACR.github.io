@@ -38,6 +38,6 @@ Después abrir [http://localhost:5500](http://localhost:5500).
 
 ## 📬 Contacto
 
-- **LinkedIn:** [Augusto César Rodríguez](https://www.linkedin.com/in/augusto-c%C3%A9sar-rodr%C3%ADguez-7381ba290/)
+- **LinkedIn:** [Augusto César Rodríguez](https://www.linkedin.com/in/augusto-cesar-rodriguez-454948437/)
 - **GitHub:** [@Augusto-ACR](https://github.com/Augusto-ACR)
 - **Email:** augustocrodriguez2004@gmail.com
